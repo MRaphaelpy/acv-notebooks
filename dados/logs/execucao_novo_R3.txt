@@ -1,0 +1,29 @@
+Máquina: marcos | Positivo Bahia - VAIO VJFE59F11X-B1211H | palavra-chave: pikachu
+Gravando /home/marcos/acv-notebooks/src/../dados/logs/novo_R3.csv por 600 s ...
+18:28:46    5.97 W  bateria 58%  [pikachu]
+[2026-11-11 18:28:49] carga.py: 16 núcleos, 597 s, máquina marcos
+18:29:16   27.25 W  bateria 57%  [pikachu]
+18:29:46   27.51 W  bateria 54%  [pikachu]
+18:30:16   27.90 W  bateria 52%  [pikachu]
+18:30:46   27.71 W  bateria 49%  [pikachu]
+18:31:16   27.78 W  bateria 47%  [pikachu]
+18:31:46   28.04 W  bateria 44%  [pikachu]
+18:32:16   28.07 W  bateria 41%  [pikachu]
+18:32:46   28.27 W  bateria 39%  [pikachu]
+18:33:16   28.55 W  bateria 36%  [pikachu]
+18:33:46   29.14 W  bateria 34%  [pikachu]
+
+   palavra-chave: pikachu | marcos | 2026-11-11 18:33:49
+   captura salva: dados/evidencias/novo_R3_20261111_183349.png
+18:34:16   28.76 W  bateria 31%  [pikachu]
+18:34:46   28.97 W  bateria 28%  [pikachu]
+18:35:16   28.90 W  bateria 25%  [pikachu]
+18:35:46   28.90 W  bateria 23%  [pikachu]
+18:36:16   28.98 W  bateria 20%  [pikachu]
+18:36:46   28.77 W  bateria 17%  [pikachu]
+18:37:16   28.86 W  bateria 15%  [pikachu]
+18:37:46   29.37 W  bateria 12%  [pikachu]
+18:38:16   14.62 W  bateria 9%  [pikachu]
+Fim. /home/marcos/acv-notebooks/src/../dados/logs/novo_R3.csv
+[2026-11-11 18:38:46] fim. maquina=marcos;nucleos=16;inicio=2026-11-11T18:28:49;fim=2026-11-11T18:38:46;duracao_s=597.0;MiB_hasheados=1672133;MiB_por_s=2800.7
+   novo_R3: 600 amostras em dados/logs/novo_R3.csv

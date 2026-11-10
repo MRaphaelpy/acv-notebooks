@@ -1,0 +1,99 @@
+Máquina mint | equipamento: antigo | palavra: pikachu
+Confira: NA BATERIA, brilho 50%, sem USB/fones, modo de energia equilibrado.
+Enter para começar o R1 (ocioso)... 
+== R1 ocioso: não mexa no notebook por 10 min ==
+Máquina: mint | SAMSUNG ELECTRONICS CO., LTD. RV415/RV515 | AMD E-300 APU with Radeon(tm) HD Graphics | palavra-chave: pikachu
+Gravando /home/mint/acv-notebooks/src/../dados/logs/antigo_R1.csv por 600 s (utilização de CPU medida; potência será estimada)
+19:16:09  CPU   2.0%  1038 MHz  58.4 °C  [pikachu]
+19:16:39  CPU   0.5%  779 MHz  57.9 °C  [pikachu]
+19:17:09  CPU   0.0%  779 MHz  57.5 °C  [pikachu]
+19:17:39  CPU   0.0%  779 MHz  57.5 °C  [pikachu]
+19:18:09  CPU   0.0%  779 MHz  57.6 °C  [pikachu]
+19:18:39  CPU   0.5%  779 MHz  57.5 °C  [pikachu]
+19:19:09  CPU   0.5%  779 MHz  57.5 °C  [pikachu]
+19:19:39  CPU   0.5%  779 MHz  57.0 °C  [pikachu]
+19:20:09  CPU   1.0%  779 MHz  57.5 °C  [pikachu]
+19:20:39  CPU   0.0%  779 MHz  57.5 °C  [pikachu]
+19:21:09  CPU   0.0%  779 MHz  57.4 °C  [pikachu]
+
+   palavra-chave: pikachu | mint | 2026-11-11 19:21:11
+   captura salva: dados/evidencias/antigo_R1_20261111_192111.png
+19:21:39  CPU   0.5%  779 MHz  57.5 °C  [pikachu]
+19:22:09  CPU   1.0%  785 MHz  57.4 °C  [pikachu]
+19:22:39  CPU   0.5%  779 MHz  57.5 °C  [pikachu]
+19:23:09  CPU   0.5%  779 MHz  57.4 °C  [pikachu]
+19:23:39  CPU   0.5%  779 MHz  57.4 °C  [pikachu]
+19:24:09  CPU   0.0%  779 MHz  57.0 °C  [pikachu]
+19:24:39  CPU   1.0%  779 MHz  57.1 °C  [pikachu]
+19:25:09  CPU   0.0%  780 MHz  57.6 °C  [pikachu]
+19:25:39  CPU   1.0%  779 MHz  57.0 °C  [pikachu]
+Fim. /home/mint/acv-notebooks/src/../dados/logs/antigo_R1.csv
+   antigo_R1: 600 amostras em dados/logs/antigo_R1.csv
+
+Pausa de 60 s. Vou abrir 8 abas e um editor para o R2.
+   abra um editor de código manualmente
+Abas e editor abertos? Volte para ESTE terminal e dê Enter para começar o R2... 
+== R2 típico: digite no editor de vez em quando, troque de aba às vezes ==
+Máquina: mint | SAMSUNG ELECTRONICS CO., LTD. RV415/RV515 | AMD E-300 APU with Radeon(tm) HD Graphics | palavra-chave: pikachu
+Gravando /home/mint/acv-notebooks/src/../dados/logs/antigo_R2.csv por 600 s (utilização de CPU medida; potência será estimada)
+19:28:09  CPU 100.0%  1297 MHz  70.0 °C  [pikachu]
+19:28:39  CPU 100.0%  1297 MHz  71.8 °C  [pikachu]
+19:29:09  CPU  87.9%  1297 MHz  72.0 °C  [pikachu]
+19:29:39  CPU  76.7%  1297 MHz  72.4 °C  [pikachu]
+19:30:09  CPU  49.2%  779 MHz  68.4 °C  [pikachu]
+19:30:39  CPU 100.0%  1297 MHz  71.0 °C  [pikachu]
+19:31:09  CPU  99.0%  1297 MHz  72.1 °C  [pikachu]
+19:31:39  CPU   9.5%  780 MHz  64.5 °C  [pikachu]
+19:32:09  CPU  25.5%  778 MHz  62.5 °C  [pikachu]
+19:32:39  CPU  11.4%  778 MHz  60.6 °C  [pikachu]
+19:33:09  CPU  10.1%  778 MHz  60.2 °C  [pikachu]
+
+   palavra-chave: pikachu | mint | 2026-11-11 19:33:10
+   captura salva: dados/evidencias/antigo_R2_20261111_193310.png
+19:33:39  CPU 100.0%  1297 MHz  69.5 °C  [pikachu]
+19:34:09  CPU   9.5%  945 MHz  63.9 °C  [pikachu]
+19:34:39  CPU  19.7%  781 MHz  61.8 °C  [pikachu]
+19:35:09  CPU  10.5%  779 MHz  60.5 °C  [pikachu]
+19:35:39  CPU  22.1%  845 MHz  60.5 °C  [pikachu]
+19:36:09  CPU  97.5%  1297 MHz  68.0 °C  [pikachu]
+19:36:39  CPU  11.1%  779 MHz  64.0 °C  [pikachu]
+19:37:09  CPU  10.1%  780 MHz  61.1 °C  [pikachu]
+19:37:39  CPU   7.5%  779 MHz  60.6 °C  [pikachu]
+Fim. /home/mint/acv-notebooks/src/../dados/logs/antigo_R2.csv
+   antigo_R2: 600 amostras em dados/logs/antigo_R2.csv
+
+Feche o navegador e o editor e dê Enter para o R3 (carga pesada)... Pausa de 60 s.
+
+== R3 carga pesada: carga.py em todos os núcleos, não mexa ==
+Máquina: mint | SAMSUNG ELECTRONICS CO., LTD. RV415/RV515 | AMD E-300 APU with Radeon(tm) HD Graphics | palavra-chave: pikachu
+Gravando /home/mint/acv-notebooks/src/../dados/logs/antigo_R3.csv por 600 s (utilização de CPU medida; potência será estimada)
+19:39:44  CPU   2.5%  1039 MHz  59.5 °C  [pikachu]
+[2026-11-11 19:39:46] carga.py: 2 núcleos, 597 s, máquina mint
+19:40:14  CPU 100.0%  1297 MHz  70.8 °C  [pikachu]
+19:40:44  CPU 100.0%  1297 MHz  72.5 °C  [pikachu]
+19:41:14  CPU 100.0%  1297 MHz  73.0 °C  [pikachu]
+19:41:44  CPU 100.0%  1297 MHz  73.5 °C  [pikachu]
+19:42:14  CPU 100.0%  1297 MHz  73.5 °C  [pikachu]
+19:42:44  CPU 100.0%  1297 MHz  74.0 °C  [pikachu]
+19:43:14  CPU 100.0%  1297 MHz  74.0 °C  [pikachu]
+19:43:44  CPU 100.0%  1297 MHz  74.5 °C  [pikachu]
+19:44:14  CPU 100.0%  1297 MHz  74.5 °C  [pikachu]
+19:44:44  CPU 100.0%  1297 MHz  74.5 °C  [pikachu]
+
+   palavra-chave: pikachu | mint | 2026-11-11 19:44:46
+   captura salva: dados/evidencias/antigo_R3_20261111_194446.png
+19:45:14  CPU 100.0%  1297 MHz  75.0 °C  [pikachu]
+19:45:44  CPU 100.0%  1297 MHz  75.0 °C  [pikachu]
+19:46:14  CPU 100.0%  1297 MHz  75.0 °C  [pikachu]
+19:46:44  CPU 100.0%  1297 MHz  75.0 °C  [pikachu]
+19:47:14  CPU 100.0%  1297 MHz  75.0 °C  [pikachu]
+19:47:44  CPU 100.0%  1297 MHz  75.0 °C  [pikachu]
+19:48:14  CPU 100.0%  1297 MHz  75.0 °C  [pikachu]
+19:48:44  CPU 100.0%  1297 MHz  75.2 °C  [pikachu]
+19:49:14  CPU 100.0%  1297 MHz  75.5 °C  [pikachu]
+Fim. /home/mint/acv-notebooks/src/../dados/logs/antigo_R3.csv
+[2026-11-11 19:49:43] fim. maquina=mint;nucleos=2;inicio=2026-11-11T19:39:46;fim=2026-11-11T19:49:43;duracao_s=597.0;MiB_hasheados=49384;MiB_por_s=82.7
+   antigo_R3: 600 amostras em dados/logs/antigo_R3.csv
+
+Pronto. Logs em dados/logs/, capturas em dados/evidencias/.
+Anote no caderno de bordo: data, % de bateria no início e no fim, e o que deu errado.

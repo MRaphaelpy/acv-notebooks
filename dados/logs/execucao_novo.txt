@@ -1,0 +1,64 @@
+Máquina marcos | equipamento: novo | palavra: pikachu
+Confira: NA BATERIA, brilho 50%, sem USB/fones, modo de energia equilibrado.
+Enter para começar o R1 (ocioso)... 
+== R1 ocioso: não mexa no notebook por 10 min ==
+Máquina: marcos | Positivo Bahia - VAIO VJFE59F11X-B1211H | palavra-chave: pikachu
+Gravando /home/marcos/acv-notebooks/src/../dados/logs/novo_R1.csv por 600 s ...
+17:10:07   12.29 W  bateria 91%  [pikachu]
+17:10:37   12.14 W  bateria 90%  [pikachu]
+17:11:07   11.12 W  bateria 89%  [pikachu]
+17:11:37   11.62 W  bateria 88%  [pikachu]
+17:12:07   10.12 W  bateria 88%  [pikachu]
+17:12:37    9.38 W  bateria 87%  [pikachu]
+17:13:07   13.82 W  bateria 86%  [pikachu]
+17:13:37   10.24 W  bateria 84%  [pikachu]
+17:14:07   12.52 W  bateria 83%  [pikachu]
+17:14:37   10.85 W  bateria 82%  [pikachu]
+17:15:07   11.29 W  bateria 81%  [pikachu]
+
+   palavra-chave: pikachu | marcos | 2026-11-11 17:15:10
+   captura salva: dados/evidencias/novo_R1_20261111_171510.png
+17:15:37   10.83 W  bateria 80%  [pikachu]
+17:16:07    5.09 W  bateria 79%  [pikachu]
+17:16:37    8.67 W  bateria 78%  [pikachu]
+17:17:07    5.11 W  bateria 77%  [pikachu]
+17:17:37    5.11 W  bateria 76%  [pikachu]
+17:18:07    4.97 W  bateria 76%  [pikachu]
+17:18:37   13.21 W  bateria 75%  [pikachu]
+17:19:07   10.44 W  bateria 74%  [pikachu]
+17:19:37   15.89 W  bateria 73%  [pikachu]
+Fim. /home/marcos/acv-notebooks/src/../dados/logs/novo_R1.csv
+   novo_R1: 600 amostras em dados/logs/novo_R1.csv
+
+Pausa de 60 s. Vou abrir 8 abas e um editor para o R2.
+Abas e editor abertos? Volte para ESTE terminal e dê Enter para começar o R2... 
+== R2 típico: digite no editor de vez em quando, troque de aba às vezes ==
+Máquina: marcos | Positivo Bahia - VAIO VJFE59F11X-B1211H | palavra-chave: pikachu
+Gravando /home/marcos/acv-notebooks/src/../dados/logs/novo_R2.csv por 600 s ...
+17:44:01   13.95 W  bateria 25%  [pikachu]
+17:44:31   28.91 W  bateria 23%  [pikachu]
+17:45:01    6.18 W  bateria 21%  [pikachu]
+17:45:31    5.95 W  bateria 20%  [pikachu]
+17:46:01   16.95 W  bateria 19%  [pikachu]
+17:46:31   14.17 W  bateria 17%  [pikachu]
+17:47:01   13.30 W  bateria 16%  [pikachu]
+17:47:31   13.28 W  bateria 15%  [pikachu]
+17:48:01   11.45 W  bateria 14%  [pikachu]
+17:48:31   13.50 W  bateria 13%  [pikachu]
+17:49:01   15.52 W  bateria 11%  [pikachu]
+
+   palavra-chave: pikachu | marcos | 2026-11-11 17:49:04
+   captura salva: dados/evidencias/novo_R2_20261111_174904.png
+17:49:31    7.25 W  bateria 10%  [pikachu]
+17:50:01   11.62 W  bateria 9%  [pikachu]
+17:50:31    9.77 W  bateria 9%  [pikachu]
+17:51:01    8.14 W  bateria 8%  [pikachu]
+17:51:31    8.48 W  bateria 8%  [pikachu]
+17:52:01    9.10 W  bateria 8%  [pikachu]
+17:52:31   10.42 W  bateria 7%  [pikachu]
+17:53:01   11.42 W  bateria 7%  [pikachu]
+17:53:31    6.67 W  bateria 6%  [pikachu]
+Fim. /home/marcos/acv-notebooks/src/../dados/logs/novo_R2.csv
+   novo_R2: 600 amostras em dados/logs/novo_R2.csv
+
+Feche o navegador e o editor e dê Enter para o R3 (carga pesada)... 
