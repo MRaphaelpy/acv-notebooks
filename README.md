@@ -41,20 +41,6 @@ relatório), FE_BR = 0,0461 (MCTI, 2025), FE_França = 0,0412 (Ember, 2025), em 
   porque B compra o mesmo notebook e ainda usa o RV415 por 2 anos. Isso ignora que o novo de B segue
   em uso após o ano 4; por isso a conclusão usa a leitura alocada, coerente com t\* × vida útil.
 
-## Limitações
-- **P_ant é estimado a partir do uso de CPU medido**: a bateria do RV415 tem 9% da capacidade, ele desliga
-  fora da tomada e não tem sensor de potência. O uso de CPU foi medido a 1 Hz (600 s por regime; médias de
-  1,0%, 46,0% e 99,5% em R1, R2 e R3) e convertido em potência por P = 8 W (base indicada pelo professor)
-  + 18 W (TDP do E-300) × uso de CPU.
-  **A conclusão não depende da precisão dessa estimativa:** para o novo pagar a fabricação em 4 anos no SIN,
-  ΔP teria de ser de pelo menos 195 W (2.200 h/ano; `resultados/limiar_deltaP.csv`), ou seja, o RV415 teria
-  de consumir mais de 12 vezes os 16,7 W estimados. Se a estimativa estiver alta, ΔP diminui e B fica ainda melhor.
-- O indicador de carga do VAIO está descalibrado (bateria com 49% da capacidade): a queda de energia
-  implicaria 82 W no R3, contra 27 W do sensor. Usou-se o `power_now`.
-- O RV415 rodou sem HD interno, a partir de um pendrive com Linux Mint (relógio em UTC nos logs).
-- C_novo vem do Dell 5440, não do VAIO, e o transporte (3 kg) foi calculado para a Europa.
-- O fator do MCTI cobre só a combustão; o da Ember é de ciclo de vida (Brasil = 0,109). Isso favorece o Brasil.
-- A energia primária incorporada foi estimada por proporção dos componentes (Boavizta).
 
 ## Conclusão
 **Prolongar o uso do RV415 (Cenário B) emite cerca de 45% menos CO2-eq em 4 anos** no Brasil e
