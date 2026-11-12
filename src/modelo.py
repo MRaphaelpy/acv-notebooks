@@ -49,6 +49,7 @@ def carregar_documentais(dir_dados):
     p["pesos"] = pesos
     cod = perfil["codigo_matriz"]
     p["FE_alt"], p["FEP_alt"] = _num(linhas, f"FE_{cod}"), _num(linhas, f"FEP_{cod}")
+    p["C_novo_alt"] = _num(linhas, "C_novo_alt")  # opcional: outro relatório para o carbono incorporado
     if p["FE_alt"] is None or p["FEP_alt"] is None:
         sys.exit(f"Preencha FE_{cod} e FEP_{cod} em dados/parametros.csv")
     return p, linhas
@@ -337,6 +338,20 @@ def main():
           f"{p['h'] * fe_inversao(p) / p['FE_BR']:.0f} h/ano (com FE do SIN).")
     if p["h"] * fe_inversao(p) / p["FE_BR"] > 8760:
         print("  -> horas acima de 8760 h/ano são fisicamente impossíveis: no Brasil a conclusão não se inverte.")
+
+    if p.get("C_novo_alt") is not None:
+        q = dict(p, C_novo=p["C_novo_alt"])
+        t_alt = t_estrela(q["C_novo"], q["P_ant"], q["P_novo"], q["h"], q["FE_BR"])
+        alo = series(q, q["FE_BR"], q["FEP_BR"], alocar=True)
+        print(f"\nSensibilidade do carbono incorporado: C_novo = {q['C_novo']:g} kg (relatório alternativo)")
+        print(f"  t* (SIN) = {t_alt:.2f} anos; 4 anos alocado: A = {alo['A_co2'][-1]:.1f}  "
+              f"B = {alo['B_co2'][-1]:.1f} kg CO2-eq -> melhor: {vencedor(alo)}")
+        _csv(a.saida / "sensibilidade_C_novo.csv", [
+            {"C_novo": c, "t_estrela_SIN_anos": round(t_estrela(c, p["P_ant"], p["P_novo"], p["h"], p["FE_BR"]), 2),
+             "A_co2_4a": round(series(dict(p, C_novo=c), p["FE_BR"], p["FEP_BR"], alocar=True)["A_co2"][-1], 2),
+             "B_co2_4a": round(series(dict(p, C_novo=c), p["FE_BR"], p["FEP_BR"], alocar=True)["B_co2"][-1], 2),
+             "vencedor": vencedor(series(dict(p, C_novo=c), p["FE_BR"], p["FEP_BR"], alocar=True))}
+            for c in (p["C_novo"], p["C_novo_alt"])])
 
     sens = sensibilidade(p)
     _csv(a.saida / "sensibilidade.csv", sens)

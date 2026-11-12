@@ -13,9 +13,9 @@ Cada integrante sorteia 2 perguntas e responde sozinho, então **os dois precisa
 1. **Pergunta e unidade funcional** → `README.md`, primeiros parágrafos.
 2. **Como medimos** → `dados/logs/` e `dados/evidencias/` (capturas com "pikachu").
 3. **O que é medido e o que é consultado** → `dados/parametros.csv`, coluna `origem`.
-4. **Resultado** → `resultados/grafico_decisao.png`: B (prolongar) termina em 47,3 kg e A em 86,5 kg.
+4. **Resultado** → `resultados/grafico_decisao.png`: B (prolongar) termina em 134,2 kg e A em 260,0 kg.
 5. **Por que não se inverte** → `resultados/sensibilidade.csv` e a linha "Inversão" da saída do modelo.
-6. **Limitações** → P_ant estimado, bateria do VAIO descalibrada, C_novo de um modelo próximo.
+6. **Limitações** → P_ant estimado, bateria do VAIO descalibrada, C_novo de um modelo parecido (Dell Inspiron 15 3535).
 
 ## As 8 perguntas possíveis: onde mostrar e o que lembrar
 
@@ -43,13 +43,13 @@ e `dados/fontes/MCTI_Inventario_2026_janset.xlsx`.
 - França: Ember, 2025 = 41,2 g/kWh. O fator do MCTI cobre só a combustão; o da Ember é de ciclo de vida.
 
 **5. Em que ponto a conclusão se inverteria? Por que não se inverte no Brasil?** → saída do `modelo.py`.
-- Só com FE > 5,07 kg CO2-eq/kWh, ou com mais de 241.725 h/ano (o ano tem 8.760 h).
+- Só com FE > 16,2 kg CO2-eq/kWh (27 vezes a Polônia), ou com mais de 771.683 h/ano (o ano tem 8.760 h).
 - Motivo: a diferença de consumo é de só 1,77 W e a matriz é limpa. A economia é de 0,18 kg/ano,
-  contra 79 kg de fabricação, o que dá t* = 440 anos para uma vida útil de 4.
+  contra 252 kg de fabricação, o que dá t* = 1.403 anos para uma vida útil de 4.
 
 **6. Dobre as horas de uso. O que acontece com t\*, antes de rodar?** → `python3 src/modelo.py --horas 4400`.
-- **t\* cai pela metade**, porque é inversamente proporcional às horas: 440 → ~220 anos.
-- A conclusão não muda: 220 anos continua muito acima de 4.
+- **t\* cai pela metade**, porque é inversamente proporcional às horas: 1.403 → ~702 anos.
+- A conclusão não muda: 702 anos continua muito acima de 4.
 
 **7. Qual foi o maior problema e como resolveram?** → `caderno-de-bordo.md`.
 - A bateria do RV415 está com 9% da capacidade (2,96 de 32,56 Wh), ele desliga fora da tomada e não
@@ -67,13 +67,14 @@ e `dados/fontes/MCTI_Inventario_2026_janset.xlsx`.
 | P_ant (RV415, estimado) | 16,67 W |
 | P_novo (VAIO, medido) | 14,90 W |
 | ΔP | 1,77 W |
-| C_novo | 79 kg CO2-eq (Dell Inspiron 14 5440) |
+| C_novo | 252 kg CO2-eq (Dell Inspiron 15 3535); sensibilidade: 79 kg (Dell 14 5440) |
 | FE_BR / FE França | 0,0461 / 0,0412 kg CO2-eq/kWh |
-| t\* Brasil / França | 440 / 492 anos |
-| 4 anos, A / B | 86,5 / 47,3 kg CO2-eq |
-| Conta de cabeça | 2 W × 2.200 h = 4 kWh × 0,05 = 0,2 kg/ano → 79 ÷ 0,2 ≈ 400 anos |
+| t\* Brasil / França | 1.403 / 1.570 anos |
+| 4 anos, A / B | 260,0 / 134,2 kg CO2-eq |
+| Conta de cabeça | 2 W × 2.200 h = 4 kWh × 0,05 = 0,2 kg/ano → 250 ÷ 0,2 ≈ 1.250 anos |
 
 ## Pontos fracos (admita antes que perguntem)
 - P_ant é **estimado**, não medido. Mesmo se o RV415 gastasse muito mais, a conclusão não mudaria:
-  no Brasil, a troca só compensaria se o novo gastasse 195 W a menos.
-- C_novo vem do Dell 5440, porque não há relatório para o VAIO FE15.
+  no Brasil, a troca só compensaria se o novo gastasse 622 W a menos.
+- C_novo vem do Dell Inspiron 15 3535, o modelo mais parecido com o VAIO FE15 (15,6", AMD, 1,9 kg)
+  entre os relatórios encontrados. Com o Dell 14 5440 (79 kg) a decisão é a mesma (t* = 440 anos).

@@ -58,10 +58,10 @@ def grafico(ax, s, p):
     ax.annotate(f"B — prolongar o uso\n{br(B[-1])} kg", (4, B[-1]), xytext=(10, 0),
                 textcoords="offset points", va="center", fontsize=11, color=TINTA, fontweight="bold")
     i0 = 24
-    ax.annotate(f"fabricação do novo\nlogo na compra ({br(p['C_novo'], 0)} kg)", (0, A[0]), xytext=(0.15, A[0] - 22),
+    ax.annotate(f"fabricação do novo\nlogo na compra ({br(p['C_novo'], 0)} kg)", (0, A[0]), xytext=(0.15, A[0] - 0.25 * max(A)),
                 fontsize=9, color=TINTA2, arrowprops=dict(arrowstyle="-", color=TINTA3, lw=0.8))
     ax.annotate("B compra o novo no ano 2\n(metade da vida útil cai no horizonte)", (2, B[i0]),
-                xytext=(2.25, B[i0] - 30), fontsize=9, color=TINTA2,
+                xytext=(2.25, B[i0] - 0.33 * max(A)), fontsize=9, color=TINTA2,
                 arrowprops=dict(arrowstyle="-", color=TINTA3, lw=0.8))
     ax.set_xlim(0, 4)
     ax.set_ylim(0, max(A) * 1.15)
@@ -77,7 +77,7 @@ def main():
     resumo = {r["matriz"]: r for r in ler_csv("resumo.csv")}
     sin = resumo["SIN"]
     alt = resumo[p["matriz_alt"]]
-    A4, B4 = float(sin["A_co2_4a_alocado"]), float(sin["B_co2_4a_alocado"])
+    A4, B4 = float(s["A_co2"][-1]), float(s["B_co2"][-1])
     reducao = (A4 - B4) / A4 * 100
     dP = p["P_ant"] - p["P_novo"]
     t_sin, t_alt = float(sin["t_estrela_anos"]), float(alt["t_estrela_anos"])
