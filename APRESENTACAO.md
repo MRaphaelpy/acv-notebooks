@@ -78,6 +78,6 @@ e `dados/fontes/MCTI_Inventario_2026_janset.xlsx`.
   no Brasil, a troca só compensaria se o novo gastasse 622 W a menos.
 - C_novo vem do Dell Inspiron 15 3535, o modelo mais parecido com o VAIO FE15 (15,6", AMD, 1,9 kg)
   entre os relatórios encontrados. O FE15 não tem pegada publicada (VAIO, Positivo e EPEAT, buscas em 12/11).
-  Com o Dell 14 5440 (79 kg, t* = 440 anos) e com o Positivo N1110 (108 kg, t* = 602 anos) a decisão é a mesma.
+  Com o Dell 14 5440 (79 kg, t* = 439 anos) e com o Positivo N1110 (108 kg, t* = 602 anos) a decisão é a mesma.
   O N1110 é do mesmo fabricante do VAIO, mas é um notebook de 11,6" com Celeron: serve só como piso.
   Arquivo: `resultados/sensibilidade_C_novo.csv`.

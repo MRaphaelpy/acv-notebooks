@@ -71,6 +71,48 @@ def grafico(ax, s, p):
     eixos_limpos(ax)
 
 
+def grafico_relatorios(p):
+    """Barras A × B em 4 anos para cada relatório de carbono incorporado (sensibilidade)."""
+    casos = [("principal", p["C_novo"])] + list(p.get("C_novo_alts", {}).items())
+    linhas = []
+    for nome, c in casos:
+        q = dict(p, C_novo=c)
+        ss = modelo.series(q, p["FE_BR"], p["FEP_BR"], alocar=True)
+        linhas.append({"relatorio": nome, "C_novo": c, "A_co2_4a": ss["A_co2"][-1], "B_co2_4a": ss["B_co2"][-1],
+                       "t_estrela_SIN_anos": modelo.t_estrela(c, p["P_ant"], p["P_novo"], p["h"], p["FE_BR"])})
+    nomes = {"principal": "Dell Inspiron 15 3535\n(caso principal)", "5440": "Dell Inspiron 14 5440",
+             "N1110": "Positivo Master N1110\n(mesmo fabricante)"}
+    fig, ax = plt.subplots(figsize=(11, 5.4), facecolor=FUNDO)
+    y = [i * 1.55 for i in range(len(linhas))][::-1]
+    alt = 0.36
+    for yi, r in zip(y, linhas):
+        A, B, t = float(r["A_co2_4a"]), float(r["B_co2_4a"]), float(r["t_estrela_SIN_anos"])
+        ax.barh(yi + alt / 2 + 0.02, A, height=alt, color=COR_A)
+        ax.barh(yi - alt / 2 - 0.02, B, height=alt, color=COR_B)
+        ax.text(A + 4, yi + alt / 2 + 0.02, f"substituir {br(A)} kg", va="center", fontsize=10, color=TINTA)
+        ax.text(B + 4, yi - alt / 2 - 0.02, f"prolongar {br(B)} kg", va="center", fontsize=10, color=TINTA,
+                fontweight="bold")
+        ax.text(0, yi - 0.66, f"fabricação do novo: {br(float(r['C_novo']), 0)} kg · t* = {br(t, 0)} anos",
+                fontsize=9, color=TINTA2)
+    ax.set_yticks(y)
+    ax.set_yticklabels([nomes.get(r["relatorio"], r["relatorio"]) for r in linhas], fontsize=10.5, color=TINTA)
+    ax.set_xlabel("kg CO2-eq em 4 anos (SIN, carbono alocado pela vida útil)", color=TINTA2, fontsize=10)
+    ax.set_xlim(0, max(float(r["A_co2_4a"]) for r in linhas) * 1.28)
+    ax.set_ylim(-0.95, max(y) + 0.55)
+    eixos_limpos(ax)
+    ax.grid(True, axis="x", color=GRADE, lw=0.8)
+    ax.grid(False, axis="y")
+    ax.tick_params(axis="y", length=0)
+    ax.spines["left"].set_visible(False)
+    fig.text(0.02, 0.94, "A decisão não depende de qual relatório de fabricação usamos",
+             fontsize=15, fontweight="bold", color=TINTA)
+    fig.text(0.02, 0.885, f"Em todos os casos, prolongar o uso do RV415 emite menos · {br(p['h'], 0)} h/ano, "
+             f"FE {br(p['FE_BR'], 4)} kg CO2-eq/kWh", fontsize=10, color=TINTA2)
+    fig.subplots_adjust(left=0.20, right=0.97, top=0.80, bottom=0.14)
+    fig.savefig(RES / "grafico_relatorios.png", dpi=180, facecolor=FUNDO)
+    plt.close(fig)
+
+
 def main():
     p, _ = modelo.carregar(RAIZ / "dados")
     s = {k: [r[k] for r in ler_csv("serie_mensal_SIN.csv")] for k in ler_csv("serie_mensal_SIN.csv")[0]}
@@ -137,7 +179,10 @@ def main():
              fontsize=10.5, color=TINTA)
     fig.savefig(RES / "slide_decisao.png", dpi=150, facecolor=FUNDO)
     plt.close(fig)
-    print("Gerados: resultados/grafico_decisao.png e resultados/slide_decisao.png")
+
+    if p.get("C_novo_alts"):
+        grafico_relatorios(p)
+    print("Gerados: resultados/grafico_decisao.png, slide_decisao.png e grafico_relatorios.png")
 
 
 if __name__ == "__main__":

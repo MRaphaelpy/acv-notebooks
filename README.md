@@ -39,7 +39,7 @@ FE_França = 0,0412 (Ember, 2025), em kg CO2-eq/kWh.
 - **Sensibilidade:** a conclusão só se inverteria com FE > 16,2 kg CO2-eq/kWh (27 vezes a matriz da
   Polônia, à base de carvão) ou com h > 771.683 h/ano (o ano tem 8.760 h). Não se inverte em nenhum
   ponto da varredura: ΔP é pequeno e as duas matrizes são limpas, então a economia nunca paga a fabricação.
-  Com outros relatórios de carbono, B continua melhor: Dell Inspiron 14 5440 (79 kg, t\* = 440 anos) e
+  Com outros relatórios de carbono, B continua melhor: Dell Inspiron 14 5440 (79 kg, t\* = 439 anos) e
   Positivo Master N1110 (108 kg, t\* = 602 anos; mesmo fabricante do VAIO, mas 11,6" e Celeron).
 - Na leitura literal (carbono integral na compra também em B, no ano 2), B termina 0,3 kg acima de A,
   porque B compra o mesmo notebook e ainda usa o RV415 por 2 anos. Isso ignora que o novo de B segue
