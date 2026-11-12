@@ -25,7 +25,7 @@ relatório), FE_BR = 0,0461 (MCTI, 2025), FE_França = 0,0412 (Ember, 2025), em 
 ## Resultados
 | | RV415 (antigo) | VAIO (novo) |
 |---|---|---|
-| R1 / R2 / R3 (W) | 8,2 / 16,3 / 25,9 (estimado) | 10,4 / 11,0 / 27,2 (medido) |
+| R1 / R2 / R3 (W) | 8,2 / 16,3 / 25,9 (estimado pela CPU medida) | 10,4 / 11,0 / 27,2 (medido) |
 | **P média ponderada** | **16,67 W** | **14,90 W** |
 
 - ΔP = 1,77 W → economia de 3,9 kWh/ano → 0,18 kg CO2-eq/ano no SIN.
@@ -42,8 +42,13 @@ relatório), FE_BR = 0,0461 (MCTI, 2025), FE_França = 0,0412 (Ember, 2025), em 
   em uso após o ano 4; por isso a conclusão usa a leitura alocada, coerente com t\* × vida útil.
 
 ## Limitações
-- **P_ant é estimado, não medido**: a bateria do RV415 tem 9% da capacidade e ele desliga fora da tomada,
-  sem sensor de potência. P = 8 W (base indicada pelo professor) + 18 W (TDP do E-300) × uso de CPU medido.
+- **P_ant é estimado a partir do uso de CPU medido**: a bateria do RV415 tem 9% da capacidade, ele desliga
+  fora da tomada e não tem sensor de potência. O uso de CPU foi medido a 1 Hz (600 s por regime; médias de
+  1,0%, 46,0% e 99,5% em R1, R2 e R3) e convertido em potência por P = 8 W (base indicada pelo professor)
+  + 18 W (TDP do E-300) × uso de CPU.
+  **A conclusão não depende da precisão dessa estimativa:** para o novo pagar a fabricação em 4 anos no SIN,
+  ΔP teria de ser de pelo menos 195 W (2.200 h/ano; `resultados/limiar_deltaP.csv`), ou seja, o RV415 teria
+  de consumir mais de 12 vezes os 16,7 W estimados. Se a estimativa estiver alta, ΔP diminui e B fica ainda melhor.
 - O indicador de carga do VAIO está descalibrado (bateria com 49% da capacidade): a queda de energia
   implicaria 82 W no R3, contra 27 W do sensor. Usou-se o `power_now`.
 - O RV415 rodou sem HD interno, a partir de um pendrive com Linux Mint (relógio em UTC nos logs).
