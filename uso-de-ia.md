@@ -14,3 +14,4 @@ Ferramenta: Claude (Anthropic), via Claude Code, em 2026-11-11.
 - A IA não gerou valores de medição (potência, massa), não inventou fontes, nem escreveu o caderno de bordo.
 - Pesquisa da pegada de carbono do VAIO FE15 e do RV415 (site VAIO/Positivo, relatório de sustentabilidade, EPEAT, Samsung) feita com outra ferramenta de IA: aproveitada como pista; documentos conferidos pela dupla.
 - Localização e leitura do estudo de ACV do Positivo Master N1110 e inclusão como sensibilidade (Claude): aproveitado.
+- Revisão do caderno de bordo escrito pela dupla (Claude), a pedido da dupla: correção de 6 erros factuais (nomes de modelo, pesos, valores do relatório da Dell, recarga no R2, escopo da comparação) e revisão da redação, com inclusão de números já presentes nos logs e nas fontes. As sessões, os problemas e as soluções são os registrados pela dupla; nenhum evento foi acrescentado.
