@@ -2,6 +2,8 @@
 
 Prática 4 — Gestão Ambiental (PROD2222), UNIVASF, 2026.2. **Dupla 2**: Marcos Rafael Silvestri dos Santos e Jayme Gabriel Carvalho.
 
+> **Roteiro da defesa:** [`APRESENTACAO.md`](APRESENTACAO.md) — o que abrir, a ordem e onde está a resposta de cada pergunta.
+
 **Objetivo.** Trocar agora o Samsung RV415 (2011, AMD E-300; Cenário B) pelo VAIO FE15
 (Ryzen 7 5700U; Cenário A) reduz ou aumenta o impacto ambiental em 4 anos?
 
