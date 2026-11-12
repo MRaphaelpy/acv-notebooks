@@ -12,3 +12,5 @@ Ferramenta: Claude (Anthropic), via Claude Code, em 2026-11-11.
 - Rascunho da estrutura do README: aproveitado. Resultados, limitações e conclusão escritos pela dupla.
 - Busca e extração dos dados documentais (MCTI, Ember, Dell LCA, Boavizta) com URL e data: aproveitado; valores conferidos pela dupla nos arquivos de `dados/fontes/`.
 - A IA não gerou valores de medição (potência, massa), não inventou fontes, nem escreveu o caderno de bordo.
+- Pesquisa da pegada de carbono do VAIO FE15 e do RV415 (site VAIO/Positivo, relatório de sustentabilidade, EPEAT, Samsung) feita com outra ferramenta de IA: aproveitada como pista; documentos conferidos pela dupla.
+- Localização e leitura do estudo de ACV do Positivo Master N1110 e inclusão como sensibilidade (Claude): aproveitado.

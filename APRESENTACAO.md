@@ -67,7 +67,7 @@ e `dados/fontes/MCTI_Inventario_2026_janset.xlsx`.
 | P_ant (RV415, estimado) | 16,67 W |
 | P_novo (VAIO, medido) | 14,90 W |
 | ΔP | 1,77 W |
-| C_novo | 252 kg CO2-eq (Dell Inspiron 15 3535); sensibilidade: 79 kg (Dell 14 5440) |
+| C_novo | 252 kg CO2-eq (Dell Inspiron 15 3535); sensibilidade: 79 kg (Dell 14 5440) e 108 kg (Positivo N1110) |
 | FE_BR / FE França | 0,0461 / 0,0412 kg CO2-eq/kWh |
 | t\* Brasil / França | 1.403 / 1.570 anos |
 | 4 anos, A / B | 260,0 / 134,2 kg CO2-eq |
@@ -77,4 +77,7 @@ e `dados/fontes/MCTI_Inventario_2026_janset.xlsx`.
 - P_ant é **estimado**, não medido. Mesmo se o RV415 gastasse muito mais, a conclusão não mudaria:
   no Brasil, a troca só compensaria se o novo gastasse 622 W a menos.
 - C_novo vem do Dell Inspiron 15 3535, o modelo mais parecido com o VAIO FE15 (15,6", AMD, 1,9 kg)
-  entre os relatórios encontrados. Com o Dell 14 5440 (79 kg) a decisão é a mesma (t* = 440 anos).
+  entre os relatórios encontrados. O FE15 não tem pegada publicada (VAIO, Positivo e EPEAT, buscas em 12/11).
+  Com o Dell 14 5440 (79 kg, t* = 440 anos) e com o Positivo N1110 (108 kg, t* = 602 anos) a decisão é a mesma.
+  O N1110 é do mesmo fabricante do VAIO, mas é um notebook de 11,6" com Celeron: serve só como piso.
+  Arquivo: `resultados/sensibilidade_C_novo.csv`.

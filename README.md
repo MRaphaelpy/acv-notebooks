@@ -39,7 +39,8 @@ FE_França = 0,0412 (Ember, 2025), em kg CO2-eq/kWh.
 - **Sensibilidade:** a conclusão só se inverteria com FE > 16,2 kg CO2-eq/kWh (27 vezes a matriz da
   Polônia, à base de carvão) ou com h > 771.683 h/ano (o ano tem 8.760 h). Não se inverte em nenhum
   ponto da varredura: ΔP é pequeno e as duas matrizes são limpas, então a economia nunca paga a fabricação.
-  Com o carbono do Dell Inspiron 14 5440 (79 kg, outro método), t\* = 440 anos e B continua melhor (47,6 × 86,8 kg).
+  Com outros relatórios de carbono, B continua melhor: Dell Inspiron 14 5440 (79 kg, t\* = 440 anos) e
+  Positivo Master N1110 (108 kg, t\* = 602 anos; mesmo fabricante do VAIO, mas 11,6" e Celeron).
 - Na leitura literal (carbono integral na compra também em B, no ano 2), B termina 0,3 kg acima de A,
   porque B compra o mesmo notebook e ainda usa o RV415 por 2 anos. Isso ignora que o novo de B segue
   em uso após o ano 4; por isso a conclusão usa a leitura alocada, coerente com t\* × vida útil.
@@ -47,8 +48,9 @@ FE_França = 0,0412 (Ember, 2025), em kg CO2-eq/kWh.
 ## Limitações
 - **P_ant é estimado:** a bateria do RV415 tem 9% da capacidade e ele não tem sensor de potência.
   P = 8 W (base indicada pelo professor) + 18 W (TDP do E-300) × uso de CPU medido.
-- C_novo vem do Dell Inspiron 15 3535, não do VAIO. O relatório tem incerteza grande (167 a 614 kg)
-  e o transporte foi calculado para a Europa.
+- C_novo vem do Dell Inspiron 15 3535, não do VAIO: não há pegada por unidade publicada para o FE15
+  (buscas em 12/11 no site da VAIO, no relatório de sustentabilidade da Positivo e no cadastro EPEAT).
+  O relatório da Dell tem incerteza grande (167 a 614 kg) e o transporte foi calculado para a Europa.
 - O indicador de carga do VAIO está descalibrado (82 W pela queda da bateria no R3, contra 27 W do sensor);
   usou-se o `power_now`, que só se atualiza a cada ~2 s.
 - O fator do MCTI cobre só a combustão; o da Ember é de ciclo de vida. A energia primária incorporada
